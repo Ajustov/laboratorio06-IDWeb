@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de usuario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Validación</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ir a la página de Inicio</a></li>
+                <li><a href="registro.html">Ir al Formulario de Registro</a></li>
+                <li><a href="lenguajes.html">Ir al Formulario de Lenguajes</a></li>
+                <li><a href="validacion.html" aria-current="page">Ir Validación</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Datos de acceso</legend>
+
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com"><br><br>
+
+                <label for="contraseña">Contraseña:</label><br>
+                <!--pattern=".{6,12}" valida que la contraseña tenga entre 6 y 12 caracteres.-->
+                <input type="password" id="contraseña" name="contraseña" required placeholder="6-12 caracteres" pattern=".{6,12}"><br><br>
+
+                <label for="confirmar">Confirmar contraseña:</label><br>
+                <input type="password" id="confirmar" name="confirmar" required placeholder="Repite tu contraseña"><br><br>
+                <!--Aqui es donde podría agregarse una validación con JavaScript para verificar que ambas contraseñas coincidan.-->
+            </fieldset>
+            <div>
+                <input type="submit" value="Guardar">
+                <input type="reset" value="Restablecer">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
