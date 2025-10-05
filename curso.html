@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción a un Curso</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Inscripción a un Curso</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ir a la página de Inicio</a></li>
+                <li><a href="registro.html">Ir al Formulario de Registro</a></li>
+                <li><a href="lenguajes.html">Ir al Formulario de Lenguajes</a></li>
+                <li><a href="validacion.html">Ir a la Validación</a></li>
+                <li><a href="curso.html" aria-current="page">Ir al Formulario de Inscripción a un Curso</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" maxlength="20" pattern="[A-Za-z\s]+"><br><br>
+
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" id="apellido" name="apellido" required placeholder="Ingresa tu apellido" maxlength="20" pattern="[A-Za-z\s]+"><br><br>
+
+                <label for="dni">Documento de identidad:</label><br>
+                <input type="text" id="dni" name="dni" required placeholder="Ejemplo: 12345678" maxlength="8"><br><br>
+
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Información del curso</legend>
+
+                <label for="curso">Selecciona un curso:</label><br>
+                <select id="curso" name="curso" required>
+                    <option value="">-- Selecciona un curso --</option>
+                    <option value="web">Introducción al Desarrollo Web</option>
+                    <option value="java">Desarrollo de Software Orientado a  Objetos</option>
+                    <option value="python">Algoritmos y Estructura de Datos</option>
+                </select><br><br>
+                <!--<span> se usa para agrupar texto dentro del flujo normal, sin iniciar una nueva línea.-->
+                <span>Modalidad:</span><br>
+                <label><input type="radio" name="modalidad" value="presencial" required> Presencial</label><br>
+                <label><input type="radio" name="modalidad" value="virtual"> Virtual</label><br><br>
+
+                <span>Horarios disponibles:</span><br>
+                <label><input type="checkbox" name="horario" value="mañana"> Mañana</label><br>
+                <label><input type="checkbox" name="horario" value="tarde"> Tarde</label><br>
+                <label><input type="checkbox" name="horario" value="noche"> Noche</label><br><br>
+
+                <label for="comentarios">Comentarios adicionales:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escribe algún detalle adicional..."></textarea><br><br>
+            </fieldset>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
